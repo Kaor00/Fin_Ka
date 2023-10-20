@@ -1,0 +1,41 @@
+<Root>:
+    orientation: 'vertical'
+    padding: '10dp'
+    spacing: '2dp'
+    name_input: name
+    sum_input: summa
+    per_input: percent
+    result: field
+    Label:
+        text_size: self.size
+        size_hint: (1, .3)
+        haling: 'center'
+        valign: 'middle'
+        text:'Рассчёт суммы вложений для получения ежемесячной выручки с дивидендных выплат'
+    TextInput:
+        id: name
+        multiline: False
+        size_hint: (1, .3)
+        hint_text: 'Введите название вашей цели...'
+    TextInput:
+        id: summa
+        input_filter: 'float'
+        multiline: False
+        size_hint: (1, .3)
+        hint_text: 'Введите желаемую сумму в месяц...'
+    TextInput:
+        id: percent
+        input_filter: 'float'
+        multiline: False
+        size_hint: (1, .3)
+        hint_text: 'Укажите процент вклада...'
+    Button:
+        size_hint: (1, .3)
+        text: 'Рассчитать'
+        on_press: root.calculate()
+    Label:
+        text_size: self.size
+        haling: 'center'
+        valign: 'middle'
+        text: 'Здесь будет ваш расчёт'
+        id:field
